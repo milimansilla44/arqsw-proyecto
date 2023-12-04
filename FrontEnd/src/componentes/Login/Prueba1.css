@@ -6,7 +6,7 @@
   gap: 20px;
   height: 100vh;
   font-family: 'Saira Condensed', sans-serif;
-  background: linear-gradient(90deg, rgba(20,22,45,1) 0%, rgba(75,29,65,1) 35%, rgba(150,83,92,1) 100%);
+  background: linear-gradient(90deg, rgb(176, 76, 124) 0%, rgb(251, 118, 222) 35%, rgba(150,83,92,1) 100%);
 }
 
 input[type="text"],
