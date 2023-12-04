@@ -1,0 +1,77 @@
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: 'Saira Condensed', sans-serif;
+  background: linear-gradient(90deg, rgba(20,22,45,1) 0%, rgba(75,29,65,1) 35%, rgba(150,83,92,1) 100%);
+}
+
+input[type="text"],
+input[type="password"] {
+  height: 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 1rem;
+  text-align: center;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #96535C;
+  border: 1px solid #96535C;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+input[type="submit"]:hover {
+  background: #6cc6f0;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: #27262E;
+  padding: 8rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border: 15px;
+  background: rgb(20,22,45); 
+}
+
+
+.error {
+  color: #96535C;
+  font-size: 12px;
+}
+
+.login {
+  font-size: 45px;
+  font-weight: 200;
+  font-style: calc();
+  margin-bottom: 20px;
+  color: #fff;
+  list-style:none; 
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+
+.input-container label{
+  text-align: center;
+  padding: 1ch;
+}
+
+ul {
+  list-style: none;
+}

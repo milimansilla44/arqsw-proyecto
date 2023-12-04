@@ -1,0 +1,128 @@
+.title{
+  top: 10%;
+}
+
+.cantidad{
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 20px;
+    }
+    
+    .producto .cantidad {
+    display: block;
+    }
+    
+    .cantidad .number {
+    display:block;
+    font-size: 30px;
+    margin-top: -15%;
+    }
+    
+    .cantidad .subtotal {
+    display: block;
+    font-size: 20px;
+    margin-top: 20px;
+    }
+    
+    .emptySpace{
+      color: rgb(255, 255, 255);
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-left: -1rem;
+    }
+.remove {
+  background: #92c7eb;
+  background-image: url(https://previews.123rf.com/images/konstantinks/konstantinks1403/konstantinks140300511/26874781-bot%C3%B3n-de-basura-en-el-fondo-blanco-.jpg);
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  border: none;
+  padding: 11px;
+  width: 35px;
+  border-radius: 900px;
+  height: 35px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-left: 6px;
+ }
+ .remove:hover
+ {
+  width: 45px;
+  height: 45px;
+ }
+    .pago{
+      font-size: 2rem;
+      text-align: center;
+      margin:auto;
+    }
+    
+    .payment {
+      display: inline-block;
+      margin: 2rem;
+      text-transform: uppercase;
+      position: relative;
+        border-radius: 5px;
+        text-align: center;
+        width: 20rem;
+        overflow: hidden;
+        color:rgba(255,255,255,1);
+        box-shadow:inset 0 0 0 1px rgba(0,0,0,0.1);
+        text-decoration: none;
+        transition: all ease 0.5s;
+        background:#9A5665;
+      border: transparent;
+      padding: 1.2%;
+    }
+    
+    .payment:after,
+    .payment:before{
+        width: 5rem;
+        height: 12.5rem;
+        content: '';
+        display: block;
+        background: rgba(255,255,255,0.5);
+        transform: rotate(45deg);
+        top: -3.75rem;
+        position: absolute;
+        transition: none;
+        right:-45%;
+        cursor: pointer;
+    }
+    
+    .payment:before{
+        left: -48%;
+    }
+     
+    .payment:hover{
+        text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+        background:#592A58;
+    }
+     
+    .payment:hover:after,
+    .payment:hover:before{
+        transform: rotate(45deg), scaleX(130%);
+        background: rgba(255,255,255,0.1);
+        transition: all ease 0.5s;
+    }
+     
+    .payment:hover:after{
+        right: 130%;
+    }
+     
+    .payment:hover:before{
+        left: 130%;
+    }
+    
+    select {
+      font-size: 1.25rem;
+      appearance: none;
+      outline: 0;
+      box-shadow: none;
+      border: 1 solid;
+      flex: 1;
+      padding: 0 1rem;
+      text-align: center;
+      color: #000000;
+      cursor: pointer;
+    }

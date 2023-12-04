@@ -1,0 +1,33 @@
+.botonBuscar{
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #96535C;
+    border: 1px solid #96535C;
+    color: #fff;
+    padding: 10px 20px;
+}
+.form-controlinputBuscar{
+    text-align: center;
+    padding: 1ch;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 10px 20px;
+}
+.containerInput{
+    width: 20%;
+    display:flex;
+    position:static ;
+    margin:1rem auto;
+    flex-direction:row;
+  }
+.title{
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin: 0%;
+}
+.productos{
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,44 @@
+version: '3.7'
+
+services:
+  database:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: secret
+    networks:
+      - default
+
+  backend:
+    container_name: "proyect_backend"
+    build:
+      context: ./backEnd
+    ports:
+      - "8090:8090"
+    depends_on:
+      - database
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+    networks:
+      - default
+
+  frontend:
+    container_name: "proyect_frontend"
+    build: 
+      context: ./FrontEnd
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./FrontEnd:/src/App.js
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: arqsw1
+
+volumes:
+  default:

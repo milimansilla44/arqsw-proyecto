@@ -1,0 +1,64 @@
+Base de DATOS
+correr los siguiente comendos en terminal powershell
+Antes eliminar cualquier imagen de mysql que haya
+
+	->docker run -d -p 33060:3306 --name mysql-db -e MYSQL_ROOT_PASSWORD=secret mysql
+	//->docker rm -f mysql-db
+	->docker volume prune (seleccionan yes)
+	->docker volume create mysql-db-data
+	->docker run -d -p 33060:3306 --name mysql-db  -e MYSQL_ROOT_PASSWORD=secret --mount src=mysql-db-data,dst=/var/lib/mysql mysql
+	->docker exec -it mysql-db mysql -p
+	-> ingresar contraseña: secret
+	-> create database nodelogin;
+
+insersion de datos:
+con backend corriendo...
+Desde postman:
+
+POST http://localhost:8090/user
+(uno x uno) (aunque con un usuario basta)
+{
+    "username": "gonzagomezp",
+    "password": "123",
+    "city": "Cordoba",
+    "street": "Los Alamos",
+    "number": 1111,
+    "name": "Gonzalo Gomez Pizarro"
+}
+{
+    "username": "belenaguilarv",
+    "password": "123",
+    "city": "Cordoba",
+    "street": "colon",
+    "number": 5151,
+    "name": "Belen Aguilar"
+}
+{
+    "username": "jhonitrueno",
+    "password": "trueno",
+    "city": "Cordoba",
+    "street": "Av. Recta martinoli",
+    "number": 1512,
+    "name": "Juan Perez"
+}
+
+Para categorias:
+Desde terminal powershell
+	->docker exec -it mysql-db mysql -p	
+	-> contraseña: secret
+	-> connect nodelogin;
+	
+	alter table categories add name varchar(350) not null;
+	insert into categories (id,name) values (1,"carteras");
+	insert into categories (id,name) values (2,"otros");
+
+Para productos:
+
+	insert into products (name,description,picture,price,stock,category_id) values ("BOLSO MEDIANO LADY DIOR","Piel de cordero color avellana con motivo Cannage","https://wwws.dior.com/couture/ecommerce/media/catalog/product/cache/1/cover_image_1/870x580/17f82f742ffe127f42dca9de82fb58b1/J/P/1665769512_M0565ONGE_M45U_E01_ZHC.jpg?imwidth=870",12000,100,1);
+	insert into products (name,description,picture,price,stock,category_id) values ("BOLSO PEQUEÑO LADY DIOR MY ABCDIOR","Piel de cordero con motivo Cannage negra","https://api.platforme.com/api/compose?brand=dior&model=my_lady_dior&version=365&p=base:leather:noir&p=shadow:default:default&size=718&initials=",10000,100,1);
+	insert into products (name,description,picture,price,stock,category_id) values ("BOLSO MEDIANO LADY D-LITE","Bordado Dior Jardin d'Hiver crudo multicolor","https://wwws.dior.com/couture/ecommerce/media/catalog/product/cache/1/cover_image_1/870x580/17f82f742ffe127f42dca9de82fb58b1/B/2/1657813515_M0565BRWD_M941_E01_ZHC.jpg?imwidth=870",14999,100,1);
+	insert into products (name,description,picture,price,stock,category_id) values ("MINIBOLSO LADY DIOR","Piel de cordero con motivo Cannage rosa antiguo","https://wwws.dior.com/couture/ecommerce/media/catalog/product/cache/1/cover_image_1/870x580/17f82f742ffe127f42dca9de82fb58b1/G/V/1656679746_M0505OCAL_M77P_E01_ZHC.jpg?imwidth=870",9999,100,1);
+	insert into products (name,description,picture,price,stock,category_id) values ("BOLSO LADY DIOR MY ABCDIOR","Piel de cordero Cannage color latte","https://api.platforme.com/api/compose?brand=dior&model=my_lady_dior&version=369&p=base:leather:ecru&p=shadow:default:default&size=718&initials=",10999,100,1);
+
+Esto para la primera vez, (creamos la base de datos e insertamos los datos)
+la proxima vez solo corremos el conteiner desde dcker desktop y listo
