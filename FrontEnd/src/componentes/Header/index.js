@@ -1,4 +1,5 @@
 import React from "react";
+import Mac from "../../images/labialmac.jpg";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
@@ -7,7 +8,7 @@ export const Header = () => {
     <header>
       <Link to="/inicio">
       <div className="logo">
-        <img src={Nike} alt="" width="150" />
+        <img src={Mac} alt="" width="150" />
       </div>
       </Link>
       <ul>

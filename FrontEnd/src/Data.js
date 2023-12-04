@@ -37,7 +37,7 @@ const data = {
         price: 9999,
         image: require('./images/labialdior.jpg'),
         category: "Labiales",
-        img1: "https://stockx-360.imgix.net/Nike-LD-Waffle-Sacai-White-Nylon/Images/Nike-LD-Waffle-Sacai-White-Nylon/Lv2/img",
+        img1: "https://juleriaque.vtexassets.com/arquivos/ids/206739-800-auto?v=638085777148770000&width=800&height=auto&aspect=true",
         img2: ".jpg?auto=format,compress&q=90&updated_at=1606325338&w=1000",
         cantidad: 1
       },
