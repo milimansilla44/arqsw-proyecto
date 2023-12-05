@@ -20,7 +20,7 @@ code {
   box-shadow: 0 2px 6px #08a05ca4;
   padding: 0 15px;
   box-sizing: border-box;
-  background: linear-gradient(90deg, rgba(20,22,45,1) 0%, rgba(75,29,65,1) 35%, rgba(150,83,92,1) 100%);
+  background: linear-gradient(90deg, rgb(194, 87, 169) 0%, rgb(183, 141, 173) 35%, rgba(150,83,92,1) 100%);
   text-transform: uppercase;
   background-size: width height;
 }
@@ -96,7 +96,7 @@ h2{
 }
 .producto_footer h1{
   font-size: 1.2rem;
-  color: #27262E;
+  color: #9E6B6B;
   font-family: 'Saira Condensed', sans-serif;
   font-weight: 200;
   text-transform: uppercase;
@@ -265,7 +265,7 @@ h2{
   position: relative;
   transition: all .35s;
   cursor:pointer;
-  background-color: #0f1048;
+  background-color: #9E6B6B;
   padding: 15px;
 }
 

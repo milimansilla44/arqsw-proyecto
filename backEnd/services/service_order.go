@@ -162,9 +162,9 @@ func (s *orderService) InsertOrder(orderwithdetailsDto dto.OrderWithDetailsDto) 
 
 		detail.OrderId = order.Id
 		OrderDetailDto.OrderId = order.Id
-		detail.Price = 0
+		detail.Price = OrderDetailDto.Price
 		detail.Quantity = OrderDetailDto.Quantity
-		detail.TotalPrice = 0
+		detail.TotalPrice = OrderDetailDto.Price * float32(OrderDetailDto.Quantity)
 		detail.ProductId = OrderDetailDto.ProductId
 
 		detail = orderCliente.InsertOrderDetail(detail)
